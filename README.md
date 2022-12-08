@@ -13,6 +13,8 @@
 
 - npm i envalid
 
+- npm i joi
+
 ```
 
 ---

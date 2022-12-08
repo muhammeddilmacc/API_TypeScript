@@ -15,6 +15,8 @@ class App {
     this.express = express();
     this.port = port;
 
+    mongoose.set('strictQuery', false); // this prevent the deprecation warning on the console
+
     this.initializeDatabaseConnection();
     this.initializeMiddlewares();
     this.initializeControllers(controllers);
@@ -46,6 +48,7 @@ class App {
     mongoose.connect(
       `mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_PATH}`
     );
+    mongoose.set('strictQuery', false);
   }
 
   public listen(): void {
