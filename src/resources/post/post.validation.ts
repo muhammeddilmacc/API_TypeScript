@@ -1,9 +1,9 @@
-import joi from 'joi';
+import Joi from 'joi';
 
-const create = joi.object({
-  title: joi.string().required(),
-  body: joi.string().required(),
+const create = Joi.object({
+    title: Joi.string().required(),
+
+    body: Joi.string().required(),
 });
-
 
 export default { create };
